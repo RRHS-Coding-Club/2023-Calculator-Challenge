@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800;900&display=swap');
 body {
-    background-color: black;
+    background-color: #dff8ff;
     background-size: 100%;
 }
+/*MOD KEY Text Color: #81cec4*/
 #resultant {
-    background-color: white;
+    background-color: #3a4450;
     text-align: center;
-    color: black;
+    color: #f7fefe;
     -webkit-font-smoothing: antialiased;
     font-family: 'Oswald';
     font-size: 30px;
