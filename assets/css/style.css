@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@300;400;600;700;800;900&display=swap');
+body {
+    background-color: black;
+    background-size: 100%;
+}
+#resultant {
+    background-color: white;
+    text-align: center;
+    color: black;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Oswald';
+    font-size: 30px;
+    z-index: 1;
+    padding: 10px 20px;
+    top: 5px;
+}
