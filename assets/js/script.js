@@ -1,26 +1,54 @@
 let equation = [];
+let lastAnswer = undefined;
 
-function readInput(number){
-    equation.push(number);
-    document.getElementById("display").setAttribute("value", equation.join(" "));
-}
-function invertIndex(){
-    let lastIndex = equation.length - 1;
-    if(equation[lastIndex].charAt(0) != '-'){
-        alert("Fuck");
-    }else if(0 === 1){
-    
+const findPercentage = () => {
+    if(lastAnswer !== undefined){
+        document.getElementById("display").setAttribute("value", `${eval(lastAnswer*100)}%`);
     }else{
-
+        document.getElementById("display").setAttribute("value", `${eval(equation.join("")*100)}%`);
     }
 }
-function clearEquation(){
+const readValue = (number) => {
+    if(number === "()"){
+        if(equation.find((index) => index === "(")){
+            equation.push(")");
+            document.getElementById("display").setAttribute("value", equation.join(""));
+        }else{
+            equation.push("(");
+            document.getElementById("display").setAttribute("value", equation.join(""));
+        }
+    }else{
+        equation.push(number);
+        document.getElementById("display").setAttribute("value", equation.join(""));
+    }
+}
+const invertIndex = () => {
+    let targetIndex = 0;
+    let hasOperator = false;
+    for(let i = equation.length-1; i > 0; i--){
+        if(equation[i] === "*" || equation[i] === "/" || equation[i] === "-" || equation[i] === "+"){
+            targetIndex = i;
+            hasOperator = true;
+            break;
+        }
+    }
+    if(hasOperator){
+        equation.splice(targetIndex+1, 0, "-");
+        document.getElementById("display").setAttribute("value", equation.join(""));
+    }else{
+        equation.splice(0, 0, "-");
+        document.getElementById("display").setAttribute("value", equation.join(""));
+    }
+}
+const clearEquation = () => {
     equation = [];
-
+    lastAnswer = undefined;
+    document.getElementById("display").setAttribute("value", " ");
 }   
-function solveEquation(){
-    if(eval(equation.join(" ")) !== undefined){
-        document.getElementById("display").setAttribute("value", eval(equation.join(" ")));
+const solveEquation = () => {
+    if(eval(equation.join("")) !== undefined){
+        document.getElementById("display").setAttribute("value", eval(equation.join("")));
+        lastAnswer = eval(equation.join(""));
     }else{
         document.getElementById("display").setAttribute("value", "Error!");
     }

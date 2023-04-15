@@ -13,13 +13,13 @@
     <div class="calculator">
         <form>
             <div class="display">
-                <input type="text" name="display" id="display">
+                <input type="text" name="display" id="display" disabled>
             </div>
             <div>
                 <input type="button" value="C" onclick="clearEquation()">
-                <input type="button" value="()" onclick="readValue('')">
-                <input type="button" value="%" onclick="">
-                <input type="button" value="÷" onclick="">
+                <input type="button" value="()" onclick="readValue('()')">
+                <input type="button" value="%" onclick="findPercentage()">
+                <input type="button" value="÷" onclick="readValue('/')">
             </div>
             <div>
                 <input type="button" value="7" onclick="readValue('7')">
@@ -47,9 +47,9 @@
             </div>
         </form>
     </div>
+    <p id="credits">
+        Created by <a href="https://github.com/jagernet-ops" target="_blank">jagernet-ops!</a>
+    </p>
 </div>
-<p id="credits">
-    Created by <a href="https://github.com/jagernet-ops" target="_blank">jagernet-ops!</a>
-</p>
 </body>
 </html>

@@ -17,6 +17,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 .calculator{
     background-color: #3a4450;
@@ -49,21 +50,9 @@ form .display input[name=display] {
     margin: 10px;
 }
 #credits {
-    float: right;
     font-family: 'Oswald';
     font-size: 20px;
-    right: 25px;
+    justify-content: flex-end;
 }
 
 /*MOD KEY Text Color: #81cec4*/
-#resultant {
-    background-color: #3a4450;
-    text-align: center;
-    color: #f7fefe;
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Oswald';
-    font-size: 30px;
-    z-index: 1;
-    padding: 10px 20px;
-    top: 5px;
-}
