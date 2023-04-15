@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/images/calculator.ico" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../assets/js/script.js"></script>
+    <title>RRHS Web-Calculator</title>
+</head>
+<div class="container">
+    <div class="calculator">
+        <form>
+            <div class="display">
+                <input type="text" name="display" id="display" disabled>
+            </div>
+            <div>
+                <input type="button" value="C" onclick="clearEquation()">
+                <input type="button" value="()" onclick="readValue('()')">
+                <input type="button" value="%" onclick="findPercentage()">
+                <input type="button" value="÷" onclick="readValue('/')">
+            </div>
+            <div>
+                <input type="button" value="7" onclick="readValue('7')">
+                <input type="button" value="8" onclick="readValue('8')">
+                <input type="button" value="9" onclick="readValue('9')">
+                <input type="button" value="x" onclick="readValue('*')">
+            </div>
+            <div>
+                <input type="button" value="4" onclick="readValue('4')">
+                <input type="button" value="5" onclick="readValue('5')">
+                <input type="button" value="6" onclick="readValue('6')">
+                <input type="button" value="-" onclick="readValue('-')">
+            </div>
+            <div>
+                <input type="button" value="1" onclick="readValue('1')">
+                <input type="button" value="2" onclick="readValue('2')">
+                <input type="button" value="3" onclick="readValue('3')">
+                <input type="button" value="+" onclick="readValue('+')">
+            </div>
+            <div>
+                <input type="button" value="+/-" onclick="invertIndex()">
+                <input type="button" value="0" onclick="readValue('0')">
+                <input type="button" value="." onclick="readValue('.')">
+                <input type="button" value="=" onclick="solveEquation()">
+            </div>
+        </form>
+    </div>
+    <p id="credits">
+        Created by <a href="https://github.com/jagernet-ops" target="_blank">jagernet-ops!</a>
+    </p>
+</div>
+</body>
+</html>
