@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/icon type">
+    <title>keanukalc</title>
+
+    <script>
+        function calculate() {
+            const output = document.getElementById("output");
+            const input1 = document.getElementById("input1");
+            const operator = document.getElementById("operator");
+            const input2 = document.getElementById("input2");
+            let answer = undefined;
+
+            switch (operator.value) {
+                case "add":
+                    answer = parseInt(input1.value) + parseInt(input2.value);
+                    break;
+                case "subtract":
+                    answer = parseInt(input1.value) - parseInt(input2.value);
+                    break;
+
+                case "divide":
+                    answer = parseInt(input1.value) / parseInt(input2.value);
+                    break;
+
+                case "multiply":
+                    answer = parseInt(input1.value) * parseInt(input2.value);
+                    break;
+            
+                case "mod":
+                    answer = parseInt(input1.value) % parseInt(input2.value);
+                    break;
+        
+                default:
+                    answer = "Keanu doesn't understand.";
+                    break;
+            }
+
+            if (isNaN(answer)) {
+                output.innerHTML = "Keanu is angry.";
+            } else {
+                output.innerHTML = answer;
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="face">
+        <img id="keanu" src="assets/images/keanu.png" alt="sexy keanu!">
+        <div class="calc">
+            <h1 id="output" class="output">welcome!</h1>
+            <input class="inputs" id="input1" type="text" placeholder="Enter a number:">
+            <select id="operator" class="inputs">
+                <option value="">choose an operator</option>
+                <option value="add">+</option>
+                <option value="subtract">-</option>
+                <option value="multiply">*</option>
+                <option value="divide">/</option>
+                <option value="mod">%</option>
+            </select>
+            <input class="inputs" id="input2" type="text" placeholder="Enter a number!">
+            <button type="button" class="inputs" id="enter" onclick="calculate()">Utilize Keanu's Calculation Abilities!</button>
+        </div>
+    </div>
+
+</body>
+</html>
