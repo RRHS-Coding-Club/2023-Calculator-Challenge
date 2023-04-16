@@ -41,7 +41,7 @@
                     break;
             }
 
-            if (isNaN(answer)) {
+            if (isNaN(answer) || !isFinite(answer)) {
                 output.innerHTML = "Keanu is angry.";
             } else {
                 output.innerHTML = answer;
