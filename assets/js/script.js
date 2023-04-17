@@ -52,4 +52,5 @@ const solveEquation = () => {
     }else{
         document.getElementById("display").setAttribute("value", "Error!");
     }
+    equation = [];
 }
