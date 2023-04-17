@@ -45,7 +45,7 @@ def format_input(initialInput):
             if i > 0 and  ch in SYMBOLS:
                 if ch == '(':
                     # converts '3(' to '3 * ('
-                    if modifiedInput[-1].isnumeric():
+                    if modifiedInput[-1].isnumeric() or modifiedInput[-1] == ')':
                         modifiedInput += ' * '
                 # adds a space to seperate symbols and numbers
                 else:
