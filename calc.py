@@ -175,7 +175,7 @@ def replace_x(eq, x):
     
 inp = input('equation: ')
 equation = format_input(inp)
-print(equation)
+#print(equation)
 results = []
 max = 0
 min = 0
