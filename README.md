@@ -18,6 +18,8 @@ This is a graphing calculator that is meant to be able to accept a wide variety 
 It does not have strong error handling, and broken input might result in a crash or the line being made of '?'.
 There are three characters used to graph the line:
 
-'?' indicates that there was an error, likely division by 0, it mainly represents asymptotes and holes
-'X' indicates the y value of the exact (integer) x value
-'x' is used to draw steep lines, it represents the value of a decimal (float) x value
+'?' indicates that there was an error, likely division by 0, it mainly represents asymptotes and holes.
+
+'X' indicates the y value of the exact (integer) x value.
+
+'x' is used to draw steep lines, it represents the value of a decimal (float) x value.
