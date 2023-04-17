@@ -38,14 +38,14 @@ def format_input(initialInput):
         ch = initialInput[i]
         try: 
             # puts * between numbers, constants, and functions
-            if i > 0 and initialInput[i - 1].isnumeric() and ch.isalpha():
+            if i > 0 and modifiedInput[-1].isnumeric() and ch.isalpha():
                 modifiedInput += ' * '
             
             # only applies to symbols # not (not initialInput[i - 1].isnumeric() and ch != '(') and
-            if i > 0 and  ch in SYMBOLS:
+            elif i > 0 and ch in SYMBOLS:
                 if ch == '(':
                     # converts '3(' to '3 * ('
-                    if modifiedInput[-1].isnumeric() or modifiedInput[-1] == ')':
+                    if modifiedInput[-1].isnumeric() or modifiedInput[-1] == 'x' or initialInput[i - 1] == ')':
                         modifiedInput += ' * '
                 # adds a space to seperate symbols and numbers
                 else:
@@ -70,6 +70,8 @@ def format_input(initialInput):
             try:
                 if initialInput[i + 1] != ' ' and ch in SYMBOLS and not(ch == '-' and initialInput[i + 1] == '('):
                     modifiedInput += ' '
+                if (initialInput[i + 1].isalpha() or initialInput[i + 1].isnumeric()) and ch == ')':
+                    modifiedInput += '* '
             except IndexError:
                 pass
         #print(modifiedInput)
@@ -170,7 +172,7 @@ def replace_x(eq, x):
     
 inp = input('equation: ')
 equation = format_input(inp)
-
+print(equation)
 results = []
 max = 0
 min = 0
