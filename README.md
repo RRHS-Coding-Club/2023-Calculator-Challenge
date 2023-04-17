@@ -19,14 +19,4 @@ It does not have strong error handling, and broken input might result in a crash
 There are three characters used to graph the line:
         '?' indicates that there was an error, likely division by 0, it mainly represents asymptotes and holes
         'X' indicates the y value of the exact (integer) x value
-        'x' indicates the y value of a similar y value
-        
-Example:
-  x
-  x
-  X
-   X
-    X
-     ?
-----|---
-the lowercase x's help draw the line, but the uppercase X shows what y at x = 3 is.
+        'x' is used to draw steep lines, it represents the value of a decimal (float) x value
