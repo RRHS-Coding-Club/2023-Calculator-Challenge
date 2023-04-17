@@ -189,15 +189,14 @@ for i in range(40 * 4):
     elif results[-1] < min:
         min = results[-1]
     #print(results[-1])
-    
 scale = 1
 if max > -min:
     scale = max // 20
     
     while max > scale * 20 and scale < 100000:
         scale += 1
-elif min > -max:
-    scale = min // 20
+else:
+    scale = abs(min) // 20
     
     while -min > scale * 20 and scale < 100000:
         scale += 1
