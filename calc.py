@@ -60,6 +60,9 @@ def format_input(initialInput):
             if len(modifiedInput) != 0 and not modifiedInput[-2] in SYMBOLS:
                 modifiedInput += '+ '
             modifiedInput += '-'
+
+        elif ch == '-' and i == 0:
+            modifiedInput += '0 - '
         
         elif ch == ' ':
             if not (modifiedInput[-1] == '-' and modifiedInput[-3] == '+'):
@@ -172,7 +175,7 @@ def replace_x(eq, x):
     
 inp = input('equation: ')
 equation = format_input(inp)
-#print(equation)
+print(equation)
 results = []
 max = 0
 min = 0
