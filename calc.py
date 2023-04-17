@@ -7,15 +7,12 @@ SYMBOLS = ['+', '-', '*', '/', '^', '(', ')', '!', '%']
 FUNCTIONS = {
     '':lambda x: x, # called when standard parenthesis are used
     '-':lambda x: -x, # called when - is front of parenthesis
-    
     'sqrt':lambda x : math.sqrt(x), # it doesn't support other roots such as cubed root but that's possible with ^(1/3)
     'log':lambda x : math.log(x, 10), # can calculate other logs with logB(A) = log(A) / log(B)
     'ln':lambda x : math.log(x),
-    
     'sin':lambda x : math.sin(x),
     'cos':lambda x : math.cos(x),
     'tan':lambda x : math.tan(x),
-    # if a constant is infront of parenthesis it thinks that it's a function, so these stop the program from breaking
     'pi':lambda x : math.pi * x,
     'e':lambda x : math.e * x,
     'tau':lambda x : math.tau * x
@@ -130,7 +127,7 @@ def calculate_all(eq):
             i = i1
             while balance != 0:
                 i += 1
-                if eq[i] == '(':
+                if '(' in eq[i]:
                     balance -= 1
                 elif eq[i] == ')':
                     balance += 1
