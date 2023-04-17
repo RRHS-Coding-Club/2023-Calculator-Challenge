@@ -193,13 +193,13 @@ for i in range(40 * 4):
 scale = 1
 if max > -min:
     scale = max // 20
-
-    while max > scale * 20:
+    
+    while max > scale * 20 and scale < 100000:
         scale += 1
 elif min > -max:
     scale = min // 20
     
-    while -min > scale * 20:
+    while -min > scale * 20 and scale < 100000:
         scale += 1
 
 if max < 5 and min > -5:
@@ -223,10 +223,13 @@ for i in range(len(results)):
     if math.isnan(results[i]):
         map[20][i // 4] = '?'
     else:
-        if i % 4 == 0:
-            map[int(20 - results[i] // scale)][i // 4] = 'X'
-        elif map[int(20 - results[i] // scale)][i // 4] != 'X':
-            map[int(20 - results[i] // scale)][i // 4] = 'x'
+        try:
+            if i % 4 == 0:
+                map[int(20 - results[i] // scale)][i // 4] = 'X'
+            elif map[int(20 - results[i] // scale)][i // 4] != 'X':
+                map[int(20 - results[i] // scale)][i // 4] = 'x'
+        except:
+            pass
 
 print('y scale = ' + str(scale))
 print('x scale = 1.0')
