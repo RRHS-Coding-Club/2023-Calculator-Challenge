@@ -16,34 +16,34 @@
                 <input type="text" name="display" id="display" disabled="">
             </div>
             <div>
-                <input type="button" value="AC" onclick="clearEquation()">
-                <input type="button" value="( )" onclick="readValue('()')">
-                <input type="button" value="%" onclick="findPercentage()">
-                <input type="button" value="÷" onclick="readValue('/')">
+                <input type="button" value="AC" id="clear-key" onclick="clearEquation()">
+                <input type="button" value="( )" id="modify-key" onclick="readValue('()')">
+                <input type="button" value="%"  id="modify-key" onclick="findPercentage()">
+                <input type="button" value="÷"  id="modify-key" onclick="readValue('/')">
             </div>
             <div>
                 <input type="button" value="7" onclick="readValue('7')">
                 <input type="button" value="8" onclick="readValue('8')">
                 <input type="button" value="9" onclick="readValue('9')">
-                <input type="button" value="x" onclick="readValue('*')">
+                <input type="button" value="x" id="modify-key" onclick="readValue('*')">
             </div>
             <div>
                 <input type="button" value="4" onclick="readValue('4')">
                 <input type="button" value="5" onclick="readValue('5')">
                 <input type="button" value="6" onclick="readValue('6')">
-                <input type="button" value="-" onclick="readValue('-')">
+                <input type="button" value="-" id="modify-key" onclick="readValue('-')">
             </div>
             <div>
                 <input type="button" value="1" onclick="readValue('1')">
                 <input type="button" value="2" onclick="readValue('2')">
                 <input type="button" value="3" onclick="readValue('3')">
-                <input type="button" value="+" onclick="readValue('+')">
+                <input type="button" value="+" id="modify-key" onclick="readValue('+')">
             </div>
             <div>
                 <input type="button" value="+/-" onclick="invertIndex()">
                 <input type="button" value="0" onclick="readValue('0')">
                 <input type="button" value="." onclick="readValue('.')">
-                <input type="button" value="=" onclick="solveEquation()">
+                <input type="button" value="=" id="modify-key" onclick="solveEquation()">
             </div>
         </form>
     </div>
