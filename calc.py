@@ -208,7 +208,7 @@ if max < 5 and min > -5:
 map = []
 for y in range(41):
     column = []
-    for x in range(40):
+    for x in range(-1, 40):
         if y == 20:
             if x % 5 == 4:
                 column.append('|')
