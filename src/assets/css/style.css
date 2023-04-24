@@ -7,6 +7,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    margin-top: -50px;
 }
 
 .calc {
@@ -52,5 +53,29 @@ body {
 
 button:hover {
     background-color: rgb(141, 145, 255);
+    color: black;
+}
+
+#home {
+    background-color: black;
+    border-radius: 8px;
+    font-size: 15px;
+    border-width: 0px;
+    margin: 6px;
+    margin-bottom: -10px;
+    padding: 7px 15px;
+    color: rgb(168, 160, 255);
+    
+    border-color: rgb(141, 145, 255);
+}
+
+#home:hover {
+    background-color: rgb(141, 145, 255);
+    border-radius: 8px;
+    font-size: 15px;
+    border-color: rgb(141, 145, 255);
+    margin: 6px;
+    margin-bottom: -10px;
+    padding: 7px 15px;
     color: black;
 }
